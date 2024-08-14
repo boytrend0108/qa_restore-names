@@ -29,4 +29,12 @@ describe('restoreNames', () => {
   it("should return 'undefined'", () => {
     expect(restoreNames(users)).toBe(undefined);
   });
+
+  it('should return an empty array on empty input', () => {
+    const users2 = [];
+
+    restoreNames(users2);
+
+    expect(users2).toEqual([]);
+  });
 });
